@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #103f2c;
+  --color-leaf: #2f7d4b;
+  --color-mint: #cfe9d4;
+  --color-pale: #e5f4dd;
+  --color-cream: #f8f5eb;
+  --color-sand: #eee8d8;
+  --color-ink: #173129;
+  --color-muted: #65766f;
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "DM Serif Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-cream);
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-leaf) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.button-primary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 9999px;
+  background: var(--color-forest);
+  padding: 0.8rem 1.45rem;
+  color: white;
+  font-weight: 700;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  background: var(--color-leaf);
+}
+
+.button-secondary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--color-forest) 18%, transparent);
+  border-radius: 9999px;
+  background: white;
+  padding: 0.8rem 1.45rem;
+  color: var(--color-forest);
+  font-weight: 700;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-forest);
+}
+
+.nav-link {
+  color: var(--color-ink);
+  transition: color 160ms ease;
+}
+
+.nav-link:hover {
+  color: var(--color-leaf);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-mint);
+  padding: 0.55rem 0.9rem;
+  color: var(--color-forest);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.section-label {
+  color: var(--color-leaf);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  max-width: 46rem;
+  font-size: clamp(2.35rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.service-card {
+  border: 1px solid color-mix(in srgb, var(--color-forest) 12%, transparent);
+  border-radius: 2rem;
+  background: white;
+  padding: 1.75rem;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px color-mix(in srgb, var(--color-forest) 10%, transparent);
+}
+
+.category-tab {
+  border: 1px solid color-mix(in srgb, var(--color-forest) 15%, transparent);
+  border-radius: 9999px;
+  background: white;
+  padding: 0.7rem 1.25rem;
+  color: var(--color-forest);
+  font-weight: 700;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.category-tab:hover {
+  transform: translateY(-2px);
+}
+
+.category-tab-active {
+  border-color: var(--color-forest);
+  background: var(--color-forest);
+  color: white;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--color-forest) 15%, transparent);
+  border-radius: 0.9rem;
+  background: white;
+  padding: 0.85rem 1rem;
+  color: var(--color-ink);
+  font-weight: 500;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 60%, transparent);
+}
+
+.form-input:focus {
+  border-color: var(--color-leaf);
+}
+
+@media (max-width: 640px) {
+  .service-card {
+    border-radius: 1.5rem;
+  }
+}

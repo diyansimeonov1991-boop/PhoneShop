@@ -1,0 +1,10 @@
+{
+  "description": "Discover a seamless platform for purchasing and repairing phones, offering expert services and support for tech enthusiasts and everyday users.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
